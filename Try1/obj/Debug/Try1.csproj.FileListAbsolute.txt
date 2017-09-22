@@ -1,0 +1,10 @@
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\bin\Debug\NLog.config
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\bin\Debug\Try1.exe
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\bin\Debug\Try1.pdb
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\bin\Debug\NeuralNetworkLibrary.dll
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\bin\Debug\NLog.dll
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\bin\Debug\NeuralNetworkLibrary.pdb
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\bin\Debug\NLog.xml
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\obj\Debug\Try1.csprojResolveAssemblyReference.cache
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\obj\Debug\Try1.exe
+E:\Дима\NeuralNetworks\NeuralNetworkLibrary\Try1\obj\Debug\Try1.pdb

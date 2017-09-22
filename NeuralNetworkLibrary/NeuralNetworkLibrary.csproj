@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{24FA1AC9-DAD6-426D-A95F-4928774779E7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NeuralNetworkLibrary</RootNamespace>
+    <AssemblyName>NeuralNetworkLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.4.4.1\lib\net40\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DataItem.cs" />
+    <Compile Include="Data\DoubleDataList.cs" />
+    <Compile Include="Data\DoubleData.cs" />
+    <Compile Include="Data\FuzzyData.cs" />
+    <Compile Include="Data\FuzzyDouble.cs" />
+    <Compile Include="Data\FuzzyDoubleData.cs" />
+    <Compile Include="Data\Interfaces\INormalize.cs" />
+    <Compile Include="Data\Interfaces\ITrainingData.cs" />
+    <Compile Include="Data\Interfaces\ITrainingDataItem.cs" />
+    <Compile Include="Learning\BackpropagationFCNLearningAlgorithm.cs" />
+    <Compile Include="Learning\GeneticLearning.cs" />
+    <Compile Include="Learning\GeneticOperators\Crossingover.cs" />
+    <Compile Include="Learning\GibridLearning.cs" />
+    <Compile Include="Learning\Interfaces\ICrossingover.cs" />
+    <Compile Include="Learning\Interfaces\ILearningStrategy.cs" />
+    <Compile Include="Learning\Interfaces\IMetrics.cs" />
+    <Compile Include="Learning\Interfaces\IMutation.cs" />
+    <Compile Include="Learning\learning.cs" />
+    <Compile Include="Learning\LearningBGP.cs" />
+    <Compile Include="Learning\LearningConfig.cs" />
+    <Compile Include="Learning\Metrics\HalfSquaredEuclidianDistance.cs" />
+    <Compile Include="Learning\Metrics\Loglikelihood.cs" />
+    <Compile Include="Learning\GeneticOperators\Mutation.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structure\Components\Functions\HyperbolicTangensFunction.cs" />
+    <Compile Include="Structure\Components\Functions\LinearFunction.cs" />
+    <Compile Include="Structure\Components\Functions\SigmoidFunction.cs" />
+    <Compile Include="Structure\Components\InputLayer.cs" />
+    <Compile Include="Structure\Components\Interfaces\IFunction.cs" />
+    <Compile Include="Structure\Components\Interfaces\ILayer.cs" />
+    <Compile Include="Structure\Components\Interfaces\INeuron.cs" />
+    <Compile Include="Structure\Components\Layer.cs" />
+    <Compile Include="Structure\Components\MLNeuron.cs" />
+    <Compile Include="Structure\Components\Neuron.cs" />
+    <Compile Include="Structure\Networks\Interfaces\IMultilayerNeuralNetwork.cs" />
+    <Compile Include="Structure\Networks\Interfaces\INeuralNetwork.cs" />
+    <Compile Include="Structure\Networks\MultiLayerNetwork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="NLog.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
